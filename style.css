@@ -1,6 +1,5 @@
 /* ============================================================
-   BRUMOUS STUDIOS — Global Stylesheet v3
-   Studio-coded. Cool, neutral, brand-aligned.
+   BRUMOUS STUDIOS — Global Stylesheet
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
@@ -14,15 +13,16 @@
   --border:       rgba(255, 255, 255, 0.07);
   --border-hover: rgba(255, 255, 255, 0.16);
 
-  --text-primary:   #cdd0d4;
-  --text-secondary: #72787f;
-  --text-faint:     #383c40;
+  /* Text colors */
+  --text-primary:   #cdd0d4;   /* main */
+  --text-secondary: #9198a0;   /* less main */
+  --text-faint:     #6d7277;   /* least main */
 
   --accent:       #b8bfc7;
   --accent-dim:   rgba(184, 191, 199, 0.10);
   --frost:        #8a9aa8;
 
-  --nav-height:   60px;
+  --nav-height:   100px;
   --max-width:    840px;
   --font-display: 'Cinzel', 'Palatino Linotype', serif;
   --font-body:    'EB Garamond', Georgia, serif;
@@ -70,6 +70,40 @@ hr {
   margin: 2.5rem 0;
 }
 
+/* ── Scrollbar style */
+::-webkit-scrollbar{
+  background: rgba(47, 47, 48, 0.089);
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(40, 40, 41, 0.900);
+  border-radius: 10px;
+  width: 0,5rem;
+}
+
+/* Modern browsers with `scrollbar-*` support */
+@supports (scrollbar-width: auto) {
+    .scroller {
+        scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+        scrollbar-width: var(--scrollbar-width);
+    }
+}
+
+/* Legacy browsers with `::-webkit-scrollbar-*` support */
+@supports selector(::-webkit-scrollbar) {
+    .scroller::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-color-thumb);
+    }
+    .scroller::-webkit-scrollbar-track {
+        background: var(--scrollbar-color-track);
+    }
+    .scroller::-webkit-scrollbar {
+        max-width: var(--scrollbar-width-legacy);
+        max-height: var(--scrollbar-width-legacy);
+    }
+}
+
 /* ── Navigation ── */
 .nav {
   position: sticky;
@@ -94,7 +128,7 @@ hr {
 }
 
 .nav-logo img {
-  height: 32px;
+  height: 48px;
   width: auto;
 }
 

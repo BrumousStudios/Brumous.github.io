@@ -23,34 +23,50 @@
 </head>
 <body>
 
-  <div id="nav-placeholder"></div>
-  
+  <!-- HEADER + NAVBAR -->
+
+  <nav class="nav" id="main-nav">
+  <a href="https://brumous.fi" class="nav-logo">
+    <img src="https://brumous.fi/img/logo.png" alt="Brumous Studios" />
+     <!-- <div class="nav-logo-text">
+        Brumous
+        <span>Studios</span>
+      </div>-->
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu"
+    onclick="document.querySelector('#main-nav .nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/devlog/">Devlog</a></li>
+    <li><a href="renascent">Renascent</a></li>
+    <li><a href="gallery">Gallery</a></li>
+    <li><a href="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE TITLE -->
+
   <main class="page" style="max-width: 1100px;">
     <header class="page-header">
       <h1>Gallery</h1>
       <p class="subtitle">Screenshots &amp; artwork — Renascent</p>
     </header>
 
-    <!--
-      To add images:
-      1. Put image files in a folder called gallery/ next to this file
-      2. Copy a .gallery-item block below
-      3. Update src, alt, and caption
-    -->
+<!-- GALLERY BOXES -->
 
     <div class="gallery-grid">
 
-      <!-- Example — replace with images -->
       <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/gallery_assets_oathwell.jpg" alt="IMG not found, must've been the wind..." />
+        <img src="img/gallery_assets_oathwell.jpg" alt="3D environmental assets in blender" />
         <div class="gallery-item-caption">Oathwell environment assets (first custom assets wooo)</div>
       </div>
       <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/gallery_first_npc.jpg" alt="IMG not found, must've been the wind..." />
+        <img src="img/gallery_first_npc.jpg" alt="NPC rigged model in blender" />
         <div class="gallery-item-caption">First NPC, eager to yap some wisdom</div>
       </div>
       <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/gallery_first_playercharacter.jpg" alt="IMG not found, must've been the wind..." />
+        <img src="img/gallery_first_playercharacter.jpg" alt="player character model rigged in blender ready for unreal engine 5" />
         <div class="gallery-item-caption">First player character model</div>
       </div>
 
@@ -58,13 +74,23 @@
   </main>
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
-    <img id="lightbox-img" src="" alt="" />
+    <button class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">✕ Close</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
   </div>
 
-  <div id="footer-placeholder"></div>
-  <script src="/js/components.js"></script>
+<!-- FOOTER -->
 
+  <footer class="footer">
+  <div class="footer-inner">
+    <span>Brumous Studios &copy; 2026</span>
+    <div class="footer-links">
+      <a href="https://twitter.com/BrumousStudios" target="_blank" rel="noopener">Twitter / X</a>
+      <a href="https://youtube.com/@BrumousStudios" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:dev@brumous.fi">dev@brumous.fi</a>
+    </div>
+  </div>
+</footer>
+  <script src="/js/components.js"></script>
   <script>
     function openLightbox(src) {
       document.getElementById('lightbox-img').src = src;
@@ -75,7 +101,7 @@
       document.getElementById('lightbox').classList.remove('open');
       document.body.style.overflow = '';
     }
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLightbox();
     });
   </script>

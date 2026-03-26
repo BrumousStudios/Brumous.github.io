@@ -23,22 +23,29 @@
 </head>
 <body>
 
-  <!--<nav class="nav">
-    <a href="https://brumous.fi" class="nav-logo">
-      <img src="img/logo_horizontal.png" alt="Brumous Studios" />
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu"
-      onclick="this.nextElementSibling.classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="devlog">Devlog</a></li>
-      <li><a href="renascent" class="active">Renascent</a></li>
-      <li><a href="gallery">Gallery</a></li>
-      <li><a href="contact">Contact</a></li>
-    </ul>
-  </nav> -->
-  <div id="nav-placeholder"></div>
+<!-- HEADER + NAVBAR -->
+
+  <nav class="nav" id="main-nav">
+  <a href="https://brumous.fi" class="nav-logo">
+    <img src="https://brumous.fi/img/logo.png" alt="Brumous Studios" />
+     <!-- <div class="nav-logo-text">
+        Brumous
+        <span>Studios</span>
+      </div>-->
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu"
+    onclick="document.querySelector('#main-nav .nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/devlog/">Devlog</a></li>
+    <li><a href="renascent">Renascent</a></li>
+    <li><a href="gallery">Gallery</a></li>
+    <li><a href="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE TITLE -->
 
   <main class="page">
 
@@ -47,51 +54,50 @@
       <p class="subtitle">Current project — in development</p>
     </header>
 
-    <!-- HOOK — atmospheric opening line -->
     <p class="game-hook">
-      <!--
-        Write a one or two sentence hook here — something evocative that
-        captures the feeling of the game without over-explaining it.
-        Example below, replace with your own words.
-      -->
       A third-person action RPG set at the threshold between life and afterlife.<br>
       Die. Return. Ascend.
     </p>
 
-    <!-- HOOK IMAGE 1 — replace src with actual image -->
-    <!--
-    <img class="game-image" src="gallery/oathwell-concept.jpg"
-         alt="Oathwell — the hub world of Renascent" />
-    -->
+    <img src="img/renascent_ingame_draft.jpg" alt="IMAGE NOT FOUND, MUST'VE BEEN THE WIND"/>
 
     <p>
       I had just finished the Dark Souls trilogy for the first time,
       all three back-to-back in a couple of weeks, and somewhere between
       the end credits of DS3 and staring at the ceiling at 2am,
-      I thought: I wanna make something like that.
+      I thought:
+      <em>what if I made this type of thing, but set it in my world.</em>
     </p>
+
     <p>
       I've always been more of a multiplayer guy. Competitive shooters with friends etc.
       Solo games were always something I was interested in but could never sit down and actually get through.
       Dark Souls was different. DS1 had me hooked almost immediately, and by the time I finished DS3 I was a changed man.
       So naturally, I decided to make a game.
     </p>
+
     <p>
       Obviously I wasn't going to build a full Dark Souls campaign. I'm one person, and a “busy” man, so let's be realistic.
       I started thinking about formats. What kind of game could give a lot of playtime without requiring an unreasonable amount of content creation?
       A roguelike dungeon came to mind: the Palace of the Dead, a deep dungeon buried inside Final Fantasy XIV. As a format, it's simple, but appealing.
       Replayable, self-contained, with enough structure to feel like a real game without needing a sixty-hour campaign's worth of assets.
     </p>
+
     <p>
       So, a lil bit of roguelike, a lil bit of souls combat feel, slap it into the setting of my own fantasy world-building project and see what happens.
     </p>
     <br><br>
+
     <img src="img/renascent_title.jpg" alt="IMAGE NOT FOUND, MUST'VE BEEN THE WIND"/>
-    <hr>
-    <h2>The World (haven't locked in a name for that yet)</h2>
+
+    <hr />
+
+    <h2>The World (Haven't settled on a name yet)</h2>
+
     <p>
       You are dead. That's where the story starts. This story, at least.
     </p>
+
     <p>
       The player finds themselves at the threshold of the afterlife — soul flickering, the doors to eternal rest within reach.
       But there are forces stuck in this space between worlds. Ancient spirits, long-imprisoned, who can't move on without help.
@@ -99,73 +105,60 @@
       and prove yourself worthy of the title of the True Renascent.
       Because only your kin can lift the ancients’ curse of eternal unrest.
     </p>
+
     <p>
-    The world you play through is their creation, a kind of alternative reality built by these ancients as a testing ground for their successors.
+      The world you play through is their creation, a kind of alternative reality built by these ancients as a testing ground for their successors.
       It feels familiar in some ways, strange and enchanted in others. The deeper you go, the more the story in the background reveals itself.
       Not necessarily through cutscenes or exposition dumps, but through passing conversations, item descriptions, and runes carved into walls
       you might walk past without looking twice. If that sounds familiar, it's intentional.
       The atmospheric environmental storytelling of the Souls games is something I deeply admire, and I'll be doing my best to follow in those footsteps.
       And yes, I am expecting way too much from my first game dev project. I don’t care. I just wanna try it out :D
     </p>
-  
-    <img src="img/renascent_ingame_draft.jpg" alt="IMAGE NOT FOUND, MUST'VE BEEN THE WIND"/>
 
+    <!-- <img class="game-image" src="/img/player-character.jpg" alt="Player character" /> -->
 
     <hr />
 
-    <!-- HOOK IMAGE 2 — replace src with your actual image -->
-    <!--
-    <img class="game-image" src="gallery/player-character.jpg"
-         alt="The player character — heavily tattooed, white eyes" />
-    -->
-    
-    <!-- QUICK DETAILS -->
     <h2>Details</h2>
 
-    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 2;">
-      <strong style="color: var(--text-primary); font-family: var(--font-display);
-        font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;">
-        Genre
-      </strong><br/>
+    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 2.2;">
+      <span style="display:block; font-family: var(--font-display); font-size: 0.62rem;
+        letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-primary);
+        margin-bottom: 0.2rem;">Genre</span>
       Third-person action RPG &mdash; souls-like-ish combat, roguelite kinda progression
     </p>
 
-    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 2;">
-      <strong style="color: var(--text-primary); font-family: var(--font-display);
-        font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;">
-        Engine
-      </strong><br/>
+    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 2.2;">
+      <span style="display:block; font-family: var(--font-display); font-size: 0.62rem;
+        letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-primary);
+        margin-bottom: 0.2rem;">Engine</span>
       Unreal Engine 5
     </p>
 
-    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 2;">
-      <strong style="color: var(--text-primary); font-family: var(--font-display);
-        font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;">
-        Platform
-      </strong><br/>
+    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 2.2;">
+      <span style="display:block; font-family: var(--font-display); font-size: 0.62rem;
+        letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-primary);
+        margin-bottom: 0.2rem;">Platform</span>
       PC — Steam (planned (as in, if that time ever comes))
     </p>
 
-    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 2;">
-      <strong style="color: var(--text-primary); font-family: var(--font-display);
-        font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;">
-        Status
-      </strong><br/>
+    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 2.2;">
+      <span style="display:block; font-family: var(--font-display); font-size: 0.62rem;
+        letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-primary);
+        margin-bottom: 0.2rem;">Status</span>
       Early development
     </p>
 
     <hr />
 
-    <!-- DEVBLOG CTA -->
     <p style="color: var(--text-secondary);">
       Is it overly ambitious? Probably. Am I having fun? Yeah, genuinely.<br>
       It's the journey, not the destination - and so on and so forth...<br>
       Follow along in the devlog if you're curious where this goes.
-
     </p>
 
     <div style="margin-top: 1.5rem;">
-      <a href="devlog" style="
+      <a href="/blog/" style="
         display: inline-block;
         font-family: var(--font-display);
         font-size: 0.65rem;
@@ -177,15 +170,26 @@
         transition: border-color 0.2s, background 0.2s;
         text-decoration: none;
       "
-      onmouseover="this.style.borderColor='var(--border-hover)'; this.style.background='var(--surface)'"
-      onmouseout="this.style.borderColor='var(--border)'; this.style.background='transparent'">
+      onmouseover="this.style.borderColor='var(--border-hover)';this.style.background='var(--surface)'"
+      onmouseout="this.style.borderColor='var(--border)';this.style.background='transparent'">
         Follow development →
       </a>
     </div>
 
   </main>
 
-  <div id="footer-placeholder"></div>
+<!-- FOOTER -->
+
+  <footer class="footer">
+  <div class="footer-inner">
+    <span>Brumous Studios &copy; 2026</span>
+    <div class="footer-links">
+      <a href="https://twitter.com/BrumousStudios" target="_blank" rel="noopener">Twitter / X</a>
+      <a href="https://youtube.com/@BrumousStudios" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:dev@brumous.fi">dev@brumous.fi</a>
+    </div>
+  </div>
+</footer>
   <script src="/js/components.js"></script>
 
 </body>
