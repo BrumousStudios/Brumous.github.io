@@ -3,13 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="We're so back — Brumous Studios devblog #001." />
-  <title>We're so back — Brumous Studios</title>
-  <link rel="stylesheet" href="/style.css" />
+  <meta name="description" content="We're so back (we were never here before)" />
+  <meta name="image" property="og:image" content="https://brumous.fi/linkpreview.png"/>
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <title>We're so back (we were never here before)</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico?" />
 </head>
 <body>
 
-  <div id="nav-placeholder"></div>
+  <nav class="nav" id="main-nav">
+  <a href="https://brumous.fi" class="nav-logo">
+    <img src="https://brumous.fi/img/logo.png" alt="Brumous Studios" />
+     <!-- <div class="nav-logo-text">
+        Brumous
+        <span>Studios</span>
+      </div>-->
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu"
+    onclick="document.querySelector('#main-nav .nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/devlog/">Devlog</a></li>
+    <li><a href="renascent">Renascent</a></li>
+    <li><a href="gallery">Gallery</a></li>
+    <li><a href="contact">Contact</a></li>
+  </ul>
+</nav>
 
   <main class="page">
 
@@ -21,84 +44,74 @@
     <article class="post-content">
 
       <p>
-        Hey. Mr. Brumous here.
+        Hello world, is me, Mr. Brumous.
+        <br>
+        <br>
+        I've been gaming the better part of my whole life, and somewhere in the back of my head the thought of making a game has always been floating around.
+        Never acted on it though. Until recently, when I was doing that thing where you hop from one two-week hobby to the next, never finishing anything, just vibing.
+        3D modelling for a bit, some world building, dabbling in Photoshop, a week of convincing myself I'd learn music production. You know the drill.
       </p>
-
       <p>
-        I've been a gamer my whole life, and somewhere in the back of my head
-        the thought of making a game has always been floating around. Never
-        acted on it though — until recently, when I was doing that thing where
-        you hop from one two-week hobby to the next, never finishing anything,
-        just vibing. 3D modelling for a bit, some world building, dabbling in
-        Photoshop, a week of convincing myself I'd learn music production. You
-        know the drill.
+        Wait, hol'up.. What if I just mashed all of these scattered hobby phases into one project? Enter Renascent. A game in development, but more importantly, the ultimate form of recycling methods of procrastination.
       </p>
-
+        <img src="../img/renascent_title.jpg" alt="IMAGE NOT FOUND, MUST'VE BEEN THE WIND"/>
       <p>
-        And then it hit me — what if I just mashed all of these scattered hobby
-        phases into one project? Enter Renascent. A game I'm making, apparently.
+        Small caveat: I had never touched game development before starting this. My technical background is roughly "I kind of know what HTML is."
+        After quick research, Unreal Engine 5 seemed like the obvious pick — the amount of tutorials and guides on YouTube alone is genuinely staggering,
+        and it seems well suited for exactly the kind of game rattling around in my head. Also, I'm able to convince my self enough that learning Unreal is benefitial for my current career path.
       </p>
-
+      
+        <h2>But yeah, what's Renascent?</h2>
       <p>
-        Small caveat: I had never touched game development before starting this.
-        My technical background is roughly "I kind of know what HTML is." After
-        a quick research spiral, Unreal Engine 5 seemed like the obvious pick —
-        the amount of tutorials and guides on YouTube alone is genuinely
-        staggering, and it seems well suited for exactly the kind of game
-        rattling around in my head.
+        I'm aware that every experienced game dev gives the same advice to newcomers: start small,
+        make something simple, your first project will be bad anyway so keep it short. That's probably correct advice.
+        I'm choosing to ignore it.
+        <br>
       </p>
-
-      <p>Speaking of which.</p>
-
       <p>
-        I'm aware that every experienced game developer gives the same advice to
-        newcomers: start small, make something simple, your first project will be
-        bad anyway so keep it short. That's probably correct advice. I'm choosing
-        to ignore it.
+        Here's the thing. I'm not doing this to ship a fully polished game, and I'm definitely not trying to pivot into a game dev career (never say never -Justin Bieber).
+        I'm doing this because I'm genuinely curious whether I can make a game regardless if I finish it, and because "something small and simple" sounds incredibly boring.
+        What doesn't sound boring? Complex immersive worlds.
+        Combat that actually requires skill. A deep character progression system.
+        A meta progression loop that's punishing but keeps you coming back.
       </p>
-
       <p>
-        Here's the thing — I'm not doing this to ship a fully polished game, and
-        I'm definitely not trying to pivot into a game dev career. I'm doing this
-        because I'm genuinely curious whether I can pull it off, and because
-        "something small and simple" sounds incredibly boring. What doesn't sound
-        boring? Complex immersive worlds. Combat that actually requires skill. A
-        deep character progression system. A meta progression loop that's
-        punishing but keeps you coming back.
+        So naturally, I decided my first game would be a souls-like roguelite action RPG.
+        Yes, I know. Very original concept for an indie dev in 2026. I'm aware. Don't @ me.
       </p>
-
       <p>
-        So naturally, I decided my first game would be a souls-like roguelite
-        action RPG. Yes, I know. Very original concept for an indie dev in 2026.
-        I'm aware. Don't @ me.
+        Renascent is set in a nordic mythology and folklore inspired fantasy world — think less viking horned helmets,
+        more ancient spirits, curses, and a stubbornly persistent soul that refuses to stay dead.
+        More on the actual game in the <a href="https://brumous.fi/renascent">Renascent page</a>, but that's the vibe.
       </p>
-
       <p>
-        Renascent is set in an original fantasy world drawing from northern pagan
-        mythology and folklore — more ancient nature spirits, shamans, and curses
-        than anything you'd recognise from popular media. More on the actual game
-        over on the <a href="/renascent.html">Renascent page</a>.
+        Updates here will be consistently inconsistent at best. Odds of there ever being a second post on here are already pretty slim lol. I'm also finishing up university and working part time,
+        so this is strictly a hobby project running on whatever energy is left at the end of the day.
+        But if you're curious enough to stick around, welcome, and thanks of the added pressure that hopefully helps me stick to one thing longer than a month. Should be a ride.
       </p>
-
       <p>
-        Updates here will be sporadic at best. I'm also finishing up university
-        and working full time, so this is strictly a hobby project running on
-        whatever energy is left at the end of the day. But if you're curious
-        enough to stick around — welcome. Should be a ride.
+        <br>
+        — N
+        <br>
       </p>
-
-      <!-- Add images like this when you have them:
-      <img src="/img/some-screenshot.jpg" alt="Description of image" />
-      -->
 
     </article>
 
     <div class="divider">End of post</div>
-    <a href="/blog/" class="back-link">← All posts</a>
+    <a href="/devlog/" class="back-link">← All posts</a>
 
   </main>
 
-  <div id="footer-placeholder"></div>
+  <footer class="footer">
+  <div class="footer-inner">
+    <span>Brumous Studios &copy; 2026</span>
+    <div class="footer-links">
+      <a href="https://twitter.com/BrumousStudios" target="_blank" rel="noopener">Twitter / X</a>
+      <a href="https://youtube.com/@BrumousStudios" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:dev@brumous.fi">dev@brumous.fi</a>
+    </div>
+  </div>
+</footer>
   <script src="/js/components.js"></script>
 
 </body>
