@@ -182,17 +182,25 @@
 
     /* Transparent nav on landing, solidifies on scroll */
     .nav {
-      position: fixed !important;
-      background: rgba(6, 6, 6, 0) !important;
-      border-bottom-color: transparent !important;
-      backdrop-filter: blur(0px) !important;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+      background: rgba(6, 6, 6, 0);
+      border-bottom: 1px solid rgba(255,255,255,0);
+      backdrop-filter: blur(0px);
       transition: background 0.4s, border-color 0.4s, backdrop-filter 0.4s;
     }
 
     .nav.scrolled {
-      background: rgba(6, 6, 6, 0.94) !important;
-      border-bottom-color: var(--border) !important;
-      backdrop-filter: blur(10px) !important;
+      background: rgba(6, 6, 6, 0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
     @keyframes fadeUp {
